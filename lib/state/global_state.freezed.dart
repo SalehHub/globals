@@ -20,9 +20,7 @@ GlobalState _$GlobalStateFromJson(Map<String, dynamic> json) {
 class _$GlobalStateTearOff {
   const _$GlobalStateTearOff();
 
-  _GlobalState call(
-      {@LocaleConverter() Locale? locale,
-      @ThemeModeConverter() ThemeMode? themeMode}) {
+  _GlobalState call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode}) {
     return _GlobalState(
       locale: locale,
       themeMode: themeMode,
@@ -46,18 +44,13 @@ mixin _$GlobalState {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GlobalStateCopyWith<GlobalState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GlobalStateCopyWith<GlobalState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GlobalStateCopyWith<$Res> {
-  factory $GlobalStateCopyWith(
-          GlobalState value, $Res Function(GlobalState) then) =
-      _$GlobalStateCopyWithImpl<$Res>;
-  $Res call(
-      {@LocaleConverter() Locale? locale,
-      @ThemeModeConverter() ThemeMode? themeMode});
+  factory $GlobalStateCopyWith(GlobalState value, $Res Function(GlobalState) then) = _$GlobalStateCopyWithImpl<$Res>;
+  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode});
 }
 
 /// @nodoc
@@ -87,23 +80,15 @@ class _$GlobalStateCopyWithImpl<$Res> implements $GlobalStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GlobalStateCopyWith<$Res>
-    implements $GlobalStateCopyWith<$Res> {
-  factory _$GlobalStateCopyWith(
-          _GlobalState value, $Res Function(_GlobalState) then) =
-      __$GlobalStateCopyWithImpl<$Res>;
+abstract class _$GlobalStateCopyWith<$Res> implements $GlobalStateCopyWith<$Res> {
+  factory _$GlobalStateCopyWith(_GlobalState value, $Res Function(_GlobalState) then) = __$GlobalStateCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {@LocaleConverter() Locale? locale,
-      @ThemeModeConverter() ThemeMode? themeMode});
+  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode});
 }
 
 /// @nodoc
-class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res>
-    implements _$GlobalStateCopyWith<$Res> {
-  __$GlobalStateCopyWithImpl(
-      _GlobalState _value, $Res Function(_GlobalState) _then)
-      : super(_value, (v) => _then(v as _GlobalState));
+class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res> implements _$GlobalStateCopyWith<$Res> {
+  __$GlobalStateCopyWithImpl(_GlobalState _value, $Res Function(_GlobalState) _then) : super(_value, (v) => _then(v as _GlobalState));
 
   @override
   _GlobalState get _value => super._value as _GlobalState;
@@ -129,12 +114,9 @@ class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GlobalState extends _GlobalState {
-  _$_GlobalState(
-      {@LocaleConverter() this.locale, @ThemeModeConverter() this.themeMode})
-      : super._();
+  _$_GlobalState({@LocaleConverter() this.locale, @ThemeModeConverter() this.themeMode}) : super._();
 
-  factory _$_GlobalState.fromJson(Map<String, dynamic> json) =>
-      _$_$_GlobalStateFromJson(json);
+  factory _$_GlobalState.fromJson(Map<String, dynamic> json) => _$_$_GlobalStateFromJson(json);
 
   @override
   @LocaleConverter()
@@ -152,23 +134,16 @@ class _$_GlobalState extends _GlobalState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _GlobalState &&
-            (identical(other.locale, locale) ||
-                const DeepCollectionEquality().equals(other.locale, locale)) &&
-            (identical(other.themeMode, themeMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.themeMode, themeMode)));
+            (identical(other.locale, locale) || const DeepCollectionEquality().equals(other.locale, locale)) &&
+            (identical(other.themeMode, themeMode) || const DeepCollectionEquality().equals(other.themeMode, themeMode)));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(locale) ^
-      const DeepCollectionEquality().hash(themeMode);
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(locale) ^ const DeepCollectionEquality().hash(themeMode);
 
   @JsonKey(ignore: true)
   @override
-  _$GlobalStateCopyWith<_GlobalState> get copyWith =>
-      __$GlobalStateCopyWithImpl<_GlobalState>(this, _$identity);
+  _$GlobalStateCopyWith<_GlobalState> get copyWith => __$GlobalStateCopyWithImpl<_GlobalState>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -177,13 +152,10 @@ class _$_GlobalState extends _GlobalState {
 }
 
 abstract class _GlobalState extends GlobalState {
-  factory _GlobalState(
-      {@LocaleConverter() Locale? locale,
-      @ThemeModeConverter() ThemeMode? themeMode}) = _$_GlobalState;
+  factory _GlobalState({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode}) = _$_GlobalState;
   _GlobalState._() : super._();
 
-  factory _GlobalState.fromJson(Map<String, dynamic> json) =
-      _$_GlobalState.fromJson;
+  factory _GlobalState.fromJson(Map<String, dynamic> json) = _$_GlobalState.fromJson;
 
   @override
   @LocaleConverter()
@@ -193,6 +165,5 @@ abstract class _GlobalState extends GlobalState {
   ThemeMode? get themeMode => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GlobalStateCopyWith<_GlobalState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$GlobalStateCopyWith<_GlobalState> get copyWith => throw _privateConstructorUsedError;
 }

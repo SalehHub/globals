@@ -13,8 +13,7 @@ _$_GlobalState _$_$_GlobalStateFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GlobalStateToJson(_$_GlobalState instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$_$_GlobalStateToJson(_$_GlobalState instance) => <String, dynamic>{
       'locale': const LocaleConverter().toJson(instance.locale),
       'themeMode': _$ThemeModeEnumMap[instance.themeMode],
     };

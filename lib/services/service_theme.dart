@@ -130,5 +130,4 @@ bool isDark(BuildContext context) => getTheme(context).brightness == Brightness.
 
 bool isLight(BuildContext context) => getTheme(context).brightness == Brightness.light;
 
-Color getTextColor(BuildContext context, [Color colorWhenDark = Colors.white, Color colorWhenLight = Colors.black]) =>
-    isDark(context) ? colorWhenDark : colorWhenLight;
+Color getTextColor(BuildContext context, [Color colorWhenDark = Colors.white, Color colorWhenLight = Colors.black]) => isDark(context) ? colorWhenDark : colorWhenLight;
