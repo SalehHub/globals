@@ -1,6 +1,6 @@
 import '../globals.dart';
 
-class ServiceNav {
+class ServiceNavigation {
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   static Future<void> push({required Widget page}) async {
