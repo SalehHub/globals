@@ -21,7 +21,7 @@ class ServiceDeviceInfo {
       return androidInfo?.model;
     } else if (Platform.isIOS) {
       iosInfo ??= await deviceInfo.iosInfo;
-      return iosInfo?.utsname.machine;
+      return iosInfo?.model;
     }
   }
 }
