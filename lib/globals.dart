@@ -3,6 +3,7 @@ export 'dart:io';
 
 export 'package:device_info_plus/device_info_plus.dart';
 export 'package:flutter/cupertino.dart';
+export 'package:flutter/foundation.dart' hide binarySearch, mergeSort;
 export 'package:flutter/material.dart' hide RefreshCallback;
 export 'package:flutter/services.dart';
 export 'package:flutter_localizations/flutter_localizations.dart';
