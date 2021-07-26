@@ -9,6 +9,10 @@ class GlobalState with _$GlobalState {
   factory GlobalState({
     @LocaleConverter() Locale? locale,
     @ThemeModeConverter() ThemeMode? themeMode,
+    String? os,
+    int? appBuild,
+    String? deviceID,
+    String? deviceModel,
   }) = _GlobalState;
   factory GlobalState.fromJson(Map<String, dynamic> json) => _$GlobalStateFromJson(json);
 }

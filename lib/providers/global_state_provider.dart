@@ -30,3 +30,15 @@ class GlobalStateNotifier extends StateNotifier<GlobalState> {
     state = state.copyWith(locale: value);
   }
 }
+
+Future<GlobalState> getGlobalState() async {
+  final GlobalState globalState = GlobalState(
+    locale: await ServiceGlobalCache.getLocale(),
+    themeMode: await ServiceGlobalCache.getTheme(),
+    os: Platform.operatingSystem.toLowerCase(),
+    appBuild: await ServicePackageInfo.getAppBuild(),
+    deviceModel: await ServiceDeviceInfo.getModel(),
+    deviceID: await ServiceDeviceInfo.getId(),
+  );
+  return globalState;
+}

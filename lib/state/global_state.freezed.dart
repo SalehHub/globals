@@ -20,10 +20,14 @@ GlobalState _$GlobalStateFromJson(Map<String, dynamic> json) {
 class _$GlobalStateTearOff {
   const _$GlobalStateTearOff();
 
-  _GlobalState call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode}) {
+  _GlobalState call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode, String? os, int? appBuild, String? deviceID, String? deviceModel}) {
     return _GlobalState(
       locale: locale,
       themeMode: themeMode,
+      os: os,
+      appBuild: appBuild,
+      deviceID: deviceID,
+      deviceModel: deviceModel,
     );
   }
 
@@ -41,6 +45,10 @@ mixin _$GlobalState {
   Locale? get locale => throw _privateConstructorUsedError;
   @ThemeModeConverter()
   ThemeMode? get themeMode => throw _privateConstructorUsedError;
+  String? get os => throw _privateConstructorUsedError;
+  int? get appBuild => throw _privateConstructorUsedError;
+  String? get deviceID => throw _privateConstructorUsedError;
+  String? get deviceModel => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,7 +58,7 @@ mixin _$GlobalState {
 /// @nodoc
 abstract class $GlobalStateCopyWith<$Res> {
   factory $GlobalStateCopyWith(GlobalState value, $Res Function(GlobalState) then) = _$GlobalStateCopyWithImpl<$Res>;
-  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode});
+  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode, String? os, int? appBuild, String? deviceID, String? deviceModel});
 }
 
 /// @nodoc
@@ -65,6 +73,10 @@ class _$GlobalStateCopyWithImpl<$Res> implements $GlobalStateCopyWith<$Res> {
   $Res call({
     Object? locale = freezed,
     Object? themeMode = freezed,
+    Object? os = freezed,
+    Object? appBuild = freezed,
+    Object? deviceID = freezed,
+    Object? deviceModel = freezed,
   }) {
     return _then(_value.copyWith(
       locale: locale == freezed
@@ -75,6 +87,22 @@ class _$GlobalStateCopyWithImpl<$Res> implements $GlobalStateCopyWith<$Res> {
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode?,
+      os: os == freezed
+          ? _value.os
+          : os // ignore: cast_nullable_to_non_nullable
+              as String?,
+      appBuild: appBuild == freezed
+          ? _value.appBuild
+          : appBuild // ignore: cast_nullable_to_non_nullable
+              as int?,
+      deviceID: deviceID == freezed
+          ? _value.deviceID
+          : deviceID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deviceModel: deviceModel == freezed
+          ? _value.deviceModel
+          : deviceModel // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -83,7 +111,7 @@ class _$GlobalStateCopyWithImpl<$Res> implements $GlobalStateCopyWith<$Res> {
 abstract class _$GlobalStateCopyWith<$Res> implements $GlobalStateCopyWith<$Res> {
   factory _$GlobalStateCopyWith(_GlobalState value, $Res Function(_GlobalState) then) = __$GlobalStateCopyWithImpl<$Res>;
   @override
-  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode});
+  $Res call({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode, String? os, int? appBuild, String? deviceID, String? deviceModel});
 }
 
 /// @nodoc
@@ -97,6 +125,10 @@ class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res> i
   $Res call({
     Object? locale = freezed,
     Object? themeMode = freezed,
+    Object? os = freezed,
+    Object? appBuild = freezed,
+    Object? deviceID = freezed,
+    Object? deviceModel = freezed,
   }) {
     return _then(_GlobalState(
       locale: locale == freezed
@@ -107,6 +139,22 @@ class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res> i
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode?,
+      os: os == freezed
+          ? _value.os
+          : os // ignore: cast_nullable_to_non_nullable
+              as String?,
+      appBuild: appBuild == freezed
+          ? _value.appBuild
+          : appBuild // ignore: cast_nullable_to_non_nullable
+              as int?,
+      deviceID: deviceID == freezed
+          ? _value.deviceID
+          : deviceID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deviceModel: deviceModel == freezed
+          ? _value.deviceModel
+          : deviceModel // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -114,7 +162,7 @@ class __$GlobalStateCopyWithImpl<$Res> extends _$GlobalStateCopyWithImpl<$Res> i
 /// @nodoc
 @JsonSerializable()
 class _$_GlobalState extends _GlobalState {
-  _$_GlobalState({@LocaleConverter() this.locale, @ThemeModeConverter() this.themeMode}) : super._();
+  _$_GlobalState({@LocaleConverter() this.locale, @ThemeModeConverter() this.themeMode, this.os, this.appBuild, this.deviceID, this.deviceModel}) : super._();
 
   factory _$_GlobalState.fromJson(Map<String, dynamic> json) => _$_$_GlobalStateFromJson(json);
 
@@ -124,10 +172,18 @@ class _$_GlobalState extends _GlobalState {
   @override
   @ThemeModeConverter()
   final ThemeMode? themeMode;
+  @override
+  final String? os;
+  @override
+  final int? appBuild;
+  @override
+  final String? deviceID;
+  @override
+  final String? deviceModel;
 
   @override
   String toString() {
-    return 'GlobalState(locale: $locale, themeMode: $themeMode)';
+    return 'GlobalState(locale: $locale, themeMode: $themeMode, os: $os, appBuild: $appBuild, deviceID: $deviceID, deviceModel: $deviceModel)';
   }
 
   @override
@@ -135,11 +191,22 @@ class _$_GlobalState extends _GlobalState {
     return identical(this, other) ||
         (other is _GlobalState &&
             (identical(other.locale, locale) || const DeepCollectionEquality().equals(other.locale, locale)) &&
-            (identical(other.themeMode, themeMode) || const DeepCollectionEquality().equals(other.themeMode, themeMode)));
+            (identical(other.themeMode, themeMode) || const DeepCollectionEquality().equals(other.themeMode, themeMode)) &&
+            (identical(other.os, os) || const DeepCollectionEquality().equals(other.os, os)) &&
+            (identical(other.appBuild, appBuild) || const DeepCollectionEquality().equals(other.appBuild, appBuild)) &&
+            (identical(other.deviceID, deviceID) || const DeepCollectionEquality().equals(other.deviceID, deviceID)) &&
+            (identical(other.deviceModel, deviceModel) || const DeepCollectionEquality().equals(other.deviceModel, deviceModel)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(locale) ^ const DeepCollectionEquality().hash(themeMode);
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(locale) ^
+      const DeepCollectionEquality().hash(themeMode) ^
+      const DeepCollectionEquality().hash(os) ^
+      const DeepCollectionEquality().hash(appBuild) ^
+      const DeepCollectionEquality().hash(deviceID) ^
+      const DeepCollectionEquality().hash(deviceModel);
 
   @JsonKey(ignore: true)
   @override
@@ -152,7 +219,7 @@ class _$_GlobalState extends _GlobalState {
 }
 
 abstract class _GlobalState extends GlobalState {
-  factory _GlobalState({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode}) = _$_GlobalState;
+  factory _GlobalState({@LocaleConverter() Locale? locale, @ThemeModeConverter() ThemeMode? themeMode, String? os, int? appBuild, String? deviceID, String? deviceModel}) = _$_GlobalState;
   _GlobalState._() : super._();
 
   factory _GlobalState.fromJson(Map<String, dynamic> json) = _$_GlobalState.fromJson;
@@ -163,6 +230,14 @@ abstract class _GlobalState extends GlobalState {
   @override
   @ThemeModeConverter()
   ThemeMode? get themeMode => throw _privateConstructorUsedError;
+  @override
+  String? get os => throw _privateConstructorUsedError;
+  @override
+  int? get appBuild => throw _privateConstructorUsedError;
+  @override
+  String? get deviceID => throw _privateConstructorUsedError;
+  @override
+  String? get deviceModel => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GlobalStateCopyWith<_GlobalState> get copyWith => throw _privateConstructorUsedError;

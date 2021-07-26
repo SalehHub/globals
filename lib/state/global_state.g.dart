@@ -10,12 +10,20 @@ _$_GlobalState _$_$_GlobalStateFromJson(Map<String, dynamic> json) {
   return _$_GlobalState(
     locale: const LocaleConverter().fromJson(json['locale'] as String?),
     themeMode: _$enumDecodeNullable(_$ThemeModeEnumMap, json['themeMode']),
+    os: json['os'] as String?,
+    appBuild: json['appBuild'] as int?,
+    deviceID: json['deviceID'] as String?,
+    deviceModel: json['deviceModel'] as String?,
   );
 }
 
 Map<String, dynamic> _$_$_GlobalStateToJson(_$_GlobalState instance) => <String, dynamic>{
       'locale': const LocaleConverter().toJson(instance.locale),
       'themeMode': _$ThemeModeEnumMap[instance.themeMode],
+      'os': instance.os,
+      'appBuild': instance.appBuild,
+      'deviceID': instance.deviceID,
+      'deviceModel': instance.deviceModel,
     };
 
 K _$enumDecode<K, V>(
