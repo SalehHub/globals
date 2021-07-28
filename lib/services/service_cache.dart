@@ -13,6 +13,10 @@ class ServiceGlobalCache {
     await (await getSharedPreferences()).setString(key, data);
   }
 
+  static Future<void> remove(String key) async {
+    await (await getSharedPreferences()).remove(key);
+  }
+
   static Future<SharedPreferences> getSharedPreferences() async {
     return _sharedPreferences ??= await SharedPreferences.getInstance();
   }
