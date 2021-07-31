@@ -14,6 +14,7 @@ export 'package:google_fonts/google_fonts.dart';
 export 'package:logger/logger.dart';
 export 'package:mdi/mdi.dart';
 export 'package:package_info_plus/package_info_plus.dart';
+export 'package:path_provider/path_provider.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 
 export 'constants.dart';
