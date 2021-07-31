@@ -33,5 +33,9 @@ class ServiceLocale {
   }
 
   // static String deviceLocaleLangCode() async => await deviceLocale().languageCode;
-  static bool isArabicLocale(BuildContext context) => Localizations.localeOf(context).languageCode == 'ar';
+  static Locale currentLocale(BuildContext context) => Localizations.localeOf(context);
+
+  static bool isArabicLocale(BuildContext context) => currentLocaleLangCode(context) == 'ar';
+
+  static String currentLocaleLangCode(BuildContext context) => currentLocale(context).languageCode;
 }
