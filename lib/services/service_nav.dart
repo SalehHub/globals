@@ -8,4 +8,8 @@ class ServiceNav {
       MaterialPageRoute(builder: (_) => page),
     );
   }
+
+  static void pop<T extends Object?>([T? result]) {
+    return navigatorKey.currentState?.pop<T?>(result);
+  }
 }
