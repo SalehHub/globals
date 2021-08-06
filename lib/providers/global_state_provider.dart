@@ -2,6 +2,18 @@ import '../globals.dart';
 
 final globalStateProvider = StateNotifierProvider<GlobalStateNotifier, GlobalState>((ref) => GlobalStateNotifier(GlobalState(), ref));
 
+GlobalState watchGlobalState(ref) {
+  return ref.watch(globalStateProvider);
+}
+
+GlobalState readGlobalState(ref) {
+  return ref.watch(globalStateProvider);
+}
+
+GlobalStateNotifier readGlobalStateNotifier(ref) {
+  return ref.watch(globalStateProvider.notifier);
+}
+
 class GlobalStateNotifier extends StateNotifier<GlobalState> {
   GlobalStateNotifier(GlobalState state, this.ref) : super(state);
 
